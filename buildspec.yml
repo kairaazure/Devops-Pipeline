@@ -3,6 +3,8 @@ version: 0.2
 
 phases:
   pre_build:
+    runtime-version:
+      packer: 0.12.3
     commands:
       - echo "Installing HashiCorp Packer..."
       - curl -qL -o packer.zip https://releases.hashicorp.com/packer/0.12.3/packer_0.12.3_linux_amd64.zip && unzip packer.zip
@@ -11,6 +13,9 @@ phases:
       - echo "Validating ami.json"
       - ./packer validate ami.json
   build:
+    runtime-version:
+      packer: 0.12.3
+
     commands:
       ### HashiCorp Packer cannot currently obtain the AWS CodeBuild-assigned role and its credentials
       ### Manually capture and configure the AWS CLI to provide HashiCorp Packer with AWS credentials
