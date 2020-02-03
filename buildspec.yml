@@ -5,7 +5,7 @@ version: 0.2
 phases:
   install:
     runtime-version:
-      packer: 0.12.3
+      php: 7.3
   pre_build:
     commands:
       - echo "Installing HashiCorp Packer..."
