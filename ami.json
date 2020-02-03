@@ -1,12 +1,16 @@
 {
     "variables": {
-        "aws_region": "{{env `us-east-1`}}",
+        "aws_region": "{{env `AWS_REGION`}}",
         "aws_ami_name": "jenkins-master-2.107.2",
-	"aws_source_ami": "ami-0ebc281c20e89ba4b"
+	"aws_source_ami": "ami-0ebc281c20e89ba4b",
+	"aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+        "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
     },
 
     "builders": [{
         "type": "amazon-ebs",
+	"access_key": "{{user `aws_access_key`}}",
+	"secret_key": "{{user `aws_secret_key`}}",
         "region": "{{user `aws_region`}}",
         "instance_type": "t2.micro",
         "ssh_username": "ec2-user",
