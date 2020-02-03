@@ -1,7 +1,7 @@
 {
     "variables": {
         "aws_region": "{{env `us-east-1`}}",
-        "aws_ami_name": "amazon-linux_{{isotime \"02Jan2006\"}}"
+        "aws_ami_name": "jenkins-master-2.107.2"
 	"aws_source_ami": "ami-0ebc281c20e89ba4b"
     },
 
