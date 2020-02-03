@@ -164,7 +164,7 @@ resource "aws_route_table" "terraform_VPC_route_table" {
 
 resource "aws_route" "terraform_VPC_internet_access" {
   route_table_id         = aws_route_table.terraform_VPC_route_table.id
-  destination_cidr_block = var.destinationCIDRblock
+  destination_cidr_block = var.internetip
   gateway_id             = aws_internet_gateway.terraform_VPC_GW.id
 } # end resource
 
