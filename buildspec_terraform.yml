@@ -18,8 +18,8 @@ phases:
     commands:
       - cd terraform
       - terraform init
-	  - terraform plan -out vpc.plan
-	  - terraform apply  vpc.plan
+      - terraform plan -out vpc.plan
+      - terraform apply  vpc.plan
   post_build:
     commands:
       - echo "Nothing to do in the post_build for now"
