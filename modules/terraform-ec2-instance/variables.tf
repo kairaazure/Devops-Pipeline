@@ -9,10 +9,11 @@ variable "key_name" {
   default = "learningaws"
 }
 variable "vpc_SG" {
-
-}
-variable "subnet_id" {
    description = "A list of security group IDs to associate with"
    type        = list(string)
+   default     = null
+}
+variable "subnet_id" {
+   description = "Subnet ID of vpc"
    default     = null
 }
