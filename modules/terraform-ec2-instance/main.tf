@@ -10,7 +10,7 @@ resource "aws_instance" "jenkins_master" {
     volume_size           = 30
     delete_on_termination = false
   }
-  tags {
+  tags =  {
     Name   = "jenkins_master"
     Author = "Nikhil Gupta"
     Tool   = "Terraform"
