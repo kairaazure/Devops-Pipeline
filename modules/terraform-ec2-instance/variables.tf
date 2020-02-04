@@ -9,8 +9,8 @@ variable "key_name" {
   default = "learningaws"
 }
 variable "vpc_SG" {
-  default = ""
+  default = "${module.vpc.vpc_SG1}"
 }
 variable subnet_id {
-  default = ""
+  default = "${module.vpc.public_subnet_id}"
 }
