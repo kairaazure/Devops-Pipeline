@@ -27,10 +27,9 @@ availability_zone = var.availabilityZone
 map_public_ip_on_launch = var.mapPublicIP
 
 tags {
+  Name = "terraform_subnet_public"
 
-Name = "terraform_subnet_public"
-
-}
+ }
 }
 # Create Security Group
 
