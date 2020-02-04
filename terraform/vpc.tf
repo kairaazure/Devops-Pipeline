@@ -8,13 +8,13 @@ provider "aws" {
 resource "aws_vpc" "terraform_vpc" {
   cidr_block = var.VpcCidrBlock
   instance_tenancy = "default"
-  
-}
+ 
 
 tags = {
   Name = "terraform_vpc"
- }
+ } 
 }
+
 
 
 #Create Public Subnet
