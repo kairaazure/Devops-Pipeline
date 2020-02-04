@@ -24,8 +24,8 @@ phases:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
       - cd terraform
-      - terraform init
       - terraform validate
+      - terraform init
       - terraform plan -out vpc.plan
       - terraform apply  vpc.plan
   post_build:
