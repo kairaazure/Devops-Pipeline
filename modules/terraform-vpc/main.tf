@@ -1,7 +1,3 @@
-provider "aws" {
-  version = "~> 2.0"
-  region = var.region
-}
 
 
 #Create VPC
@@ -169,3 +165,5 @@ resource "aws_route_table_association" "terraform_VPC_association" {
   subnet_id      = aws_subnet.terraform_subnet_public.id
   route_table_id = aws_route_table.terraform_VPC_route_table.id
 }
+
+
