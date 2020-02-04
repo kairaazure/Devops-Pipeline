@@ -22,6 +22,7 @@ phases:
       - export AWS_SESSION_TOKEN=$(echo $AWS_RAW_CRED | jq -r '.Token')
   build:
     commands:
+      - cd "$CODEBUILD_SRC_DIR"
       - cd terraform
       - terraform init
       - terraform plan -out vpc.plan
