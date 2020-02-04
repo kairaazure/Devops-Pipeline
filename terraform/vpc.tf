@@ -9,7 +9,7 @@ resource "aws_vpc" "terraform_vpc" {
   cidr_block = var.VpcCidrBlock
   instance_tenancy = "default"
 
-tags {
+tags = {
   Name = "terraform_vpc"
   
 }
@@ -25,7 +25,7 @@ resource "aws_subnet" "terraform_subnet_public" {
   availability_zone = var.availabilityZone
   map_public_ip_on_launch = var.mapPublicIP
   
-tags {
+tags =  {
   Name = "terraform_subnet_public"
 
 }
@@ -56,7 +56,7 @@ resource "aws_security_group" "terraform_SG1" {
   
   
   }
-tags {
+tags =  {
   Name = "terraform_SG1"
 
 }
@@ -133,7 +133,7 @@ resource "aws_network_acl" "terraform_NACL" {
 
 resource "aws_internet_gateway" "terraform_VPC_GW" {
   vpc_id = aws_vpc.terraform_vpc.id
-tags {
+tags =  {
   Name = "terraform_VPC_GW"
 }
 }
@@ -143,7 +143,7 @@ tags {
 resource "aws_route_table" "terraform_VPC_route_table" {
  vpc_id = aws_vpc.terraform_vpc.id
 
-tags {
+tags =  {
   Name = "terraform_VPC_route_table"
 }
 
