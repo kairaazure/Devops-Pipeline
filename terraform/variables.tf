@@ -24,7 +24,7 @@ variable "destinationCIDRblock" {
 }
 
 variable "internetip" {
-   default = "0.0.0.0./0"
+   default = "0.0.0.0/0"
 }
 
 variable "region" {
