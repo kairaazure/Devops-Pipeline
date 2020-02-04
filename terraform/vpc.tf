@@ -8,10 +8,13 @@ provider "aws" {
 resource "aws_vpc" "terraform_vpc" {
   cidr_block = var.VpcCidrBlock
   instance_tenancy = "default"
- 
 
+tags {
+  Name = "terraform_vpc"
+  
 }
 
+}
 
 
 #Create Public Subnet
@@ -21,6 +24,9 @@ resource "aws_subnet" "terraform_subnet_public" {
   cidr_block = var.SubnetCidrBlock
   availability_zone = var.availabilityZone
   map_public_ip_on_launch = var.mapPublicIP
+  
+tags {
+  Name = "terraform_subnet_public"
 
 }
 # Create Security Group
@@ -48,10 +54,11 @@ resource "aws_security_group" "terraform_SG1" {
   
   
   }
-  
-	
-}
+tags {
+  Name = "terraform_SG1"
 
+}
+}
 
 # create VPC Network access control list
 resource "aws_network_acl" "terraform_NACL" {
@@ -124,13 +131,19 @@ resource "aws_network_acl" "terraform_NACL" {
 
 resource "aws_internet_gateway" "terraform_VPC_GW" {
   vpc_id = aws_vpc.terraform_vpc.id
-
+tags {
+  Name = "terraform_VPC_GW"
+}
 }
 
 # Create the Route Table
 
 resource "aws_route_table" "terraform_VPC_route_table" {
  vpc_id = aws_vpc.terraform_vpc.id
+
+tags {
+  Name = "terraform_VPC_route_table"
+}
 
 }
 
@@ -143,7 +156,9 @@ resource "aws_route" "terraform_VPC_internet_access" {
   route_table_id         = aws_route_table.terraform_VPC_route_table.id
   destination_cidr_block = var.internetip
   gateway_id             = aws_internet_gateway.terraform_VPC_GW.id
-} # end resource
+
+
+}
 
 
 # Associate the Route Table with the Subnet
