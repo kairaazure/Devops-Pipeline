@@ -29,6 +29,8 @@ tags {
   Name = "terraform_subnet_public"
 
 }
+
+}
 # Create Security Group
 
 resource "aws_security_group" "terraform_SG1" {
