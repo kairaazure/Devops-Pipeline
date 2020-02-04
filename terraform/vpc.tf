@@ -19,8 +19,7 @@ tags = {
 
 #Create Public Subnet
 
-resource "aws_subnet" "terraform_subnet_public"
-{
+resource "aws_subnet" "terraform_subnet_public" {
 
 vpc_id = aws_vpc.terraform_vpc.id
 cidr_block = var.SubnetCidrBlock
@@ -35,8 +34,7 @@ Name = "terraform_subnet_public"
 }
 # Create Security Group
 
-resource "aws_security_group" "terraform_SG1"
-{
+resource "aws_security_group" "terraform_SG1" {
 
   vpc_id       = aws_vpc.terraform_vpc.id
   name         = "Terraform VPC Security Group"
