@@ -11,6 +11,6 @@ variable "key_name" {
 variable "vpc_SG" {
 
 }
-variable subnet_id {
+variable "subnet_id" {
 
 }
