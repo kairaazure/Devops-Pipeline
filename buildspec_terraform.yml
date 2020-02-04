@@ -25,7 +25,7 @@ phases:
       - cd "$CODEBUILD_SRC_DIR"
       - cd modules/terraform-vpc
       - terraform init
-      - cd modules/terraform-ec2-instance
+      - cd ../../modules/terraform-ec2-instance
       - terraform init
       - cd "$CODEBUILD_SRC_DIR"
       - terraform init
