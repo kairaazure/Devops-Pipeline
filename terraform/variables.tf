@@ -15,7 +15,8 @@ variable "mapPublicIP" {
 }
 
 variable "SG_CIDRblock" {
-   default = "122.162.206.189/32"
+   type = list
+   default = [ "122.162.206.189/32" ]
 }
 
 variable "destinationCIDRblock" {
