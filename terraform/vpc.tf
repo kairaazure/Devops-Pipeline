@@ -20,11 +20,10 @@ tags = {
 #Create Public Subnet
 
 resource "aws_subnet" "terraform_subnet_public" {
-
-vpc_id = aws_vpc.terraform_vpc.id
-cidr_block = var.SubnetCidrBlock
-availability_zone = var.availabilityZone
-map_public_ip_on_launch = var.mapPublicIP
+  vpc_id = aws_vpc.terraform_vpc.id
+  cidr_block = var.SubnetCidrBlock
+  availability_zone = var.availabilityZone
+  map_public_ip_on_launch = var.mapPublicIP
 
 tags {
   Name = "terraform_subnet_public"
@@ -137,8 +136,8 @@ tags = {
 # Create the Internet Gateway
 
 resource "aws_internet_gateway" "terraform_VPC_GW" {
- vpc_id = aws_vpc.terraform_vpc.id
- tags = {
+  vpc_id = aws_vpc.terraform_vpc.id
+tags = {
         Name = "Terraform VPC Internet Gateway"
 }
 }
@@ -147,7 +146,7 @@ resource "aws_internet_gateway" "terraform_VPC_GW" {
 
 resource "aws_route_table" "terraform_VPC_route_table" {
  vpc_id = aws_vpc.terraform_vpc.id
- tags = {
+tags = {
         Name = "Terraform VPC Route Table"
 }
 }
