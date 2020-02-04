@@ -23,11 +23,6 @@ phases:
   build:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
-      - cd modules/terraform-vpc
-      - terraform init
-      - cd ../../modules/terraform-ec2-instance
-      - terraform init
-      - cd "$CODEBUILD_SRC_DIR"
       - terraform init
       - terraform plan -out vpc.plan
       - terraform apply  vpc.plan
