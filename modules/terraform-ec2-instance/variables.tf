@@ -12,5 +12,7 @@ variable "vpc_SG" {
 
 }
 variable "subnet_id" {
-
+   description = "A list of security group IDs to associate with"
+   type        = list(string)
+   default     = null
 }
