@@ -10,9 +10,6 @@ resource "aws_vpc" "terraform_vpc" {
   instance_tenancy = "default"
  
 
-tags = {
-  Name = "terraform_vpc"
- } 
 }
 
 
@@ -52,10 +49,6 @@ resource "aws_security_group" "terraform_SG1" {
   
   }
   
-  tags = {
-   Name = "My VPC Security Group"
-   Description = "My VPC Security Group"
-}
 	
 }
 
@@ -123,9 +116,7 @@ resource "aws_network_acl" "terraform_NACL" {
     from_port  = 1024
     to_port    = 65535
   }
-tags = {
-    Name = "Terraform VPC ACL"
-}
+
 }
 
 	
@@ -133,18 +124,14 @@ tags = {
 
 resource "aws_internet_gateway" "terraform_VPC_GW" {
   vpc_id = aws_vpc.terraform_vpc.id
-tags = {
-        Name = "Terraform VPC Internet Gateway"
-}
+
 }
 
 # Create the Route Table
 
 resource "aws_route_table" "terraform_VPC_route_table" {
  vpc_id = aws_vpc.terraform_vpc.id
-tags = {
-        Name = "Terraform VPC Route Table"
-}
+
 }
 
 
