@@ -1,6 +1,6 @@
 output "vpc_id" {
   description = "vpc id of cloud created"
-  value       = concat(aws_vpc.terraform_vpc.*.id, [""])[0]
+  value       = concat(aws_vpc.awsvpc.*.id, [""])[0]
 
 }
 
