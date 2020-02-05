@@ -1,6 +1,6 @@
 # Create Security Group
 
-resource "aws_security_group" "${var.sg_name}" {
+resource "aws_security_group" "var.sg_name" {
 
   vpc_id       = aws_vpc.terraform_vpc.id
   name         = "Terraform VPC Security Group"

@@ -59,14 +59,14 @@ module "subnet_private" {
 }
 
 module "route_table_public" {
-  source = "./modules/Route-Table"
+  source = "./modules/Route-table"
   vpc_id = "${module.vpc.vpc_id}"
   RTname = "RT1"
   RTtype = "public"
 }
 
 module "route_table_private" {
-  source = "./modules/Route-Table"
+  source = "./modules/Route-table"
   vpc_id = "${module.vpc.vpc_id}"
   RTname = "RT2"
   RTtype = "private"
