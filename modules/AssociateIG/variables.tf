@@ -14,6 +14,6 @@ variable "gateway_id" {
   default = null
 }
 
-variable "route_table_id" {
+variable "rt_id" {
   default = null
 }
