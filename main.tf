@@ -104,4 +104,3 @@ module "nacl" {
   subnet_id = "${module.subnet_public.subnet_id}"
   
 }
-} 
