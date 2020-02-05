@@ -20,7 +20,7 @@ variable "SG_CIDRblock" {
 }
 
 variable "destinationCIDRblock" {
-   default = "122.162.206.189/32"
+   default = "0.0.0.0/0"
 }
 
 variable "internetip" {
