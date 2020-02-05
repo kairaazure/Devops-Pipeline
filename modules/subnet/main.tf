@@ -7,7 +7,7 @@ resource "aws_subnet" "awssubnet" {
   map_public_ip_on_launch = var.mapPublicIP
   
 tags =  {
-  Name = var.subnetname_var.subnettype
+  Name = ${var.subnetname}_${var.subnettype}
 
 }
 
