@@ -1,6 +1,5 @@
 #Create VPC
 resource "aws_vpc" "awsvpc" {
-  name = var.vpc_name
   cidr_block = var.VpcCidrBlock
   instance_tenancy = "default"
 
