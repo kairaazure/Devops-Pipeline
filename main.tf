@@ -43,7 +43,7 @@ module "subnet_public" {
   availabilityZone = "us-east-1a"
   mapPublicIP = true
   subnettype = "public"
-  subnetname = subnet1
+  subnetname = "subnet1"
 
 }
 
