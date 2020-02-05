@@ -24,7 +24,7 @@ phases:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
       - terraform init
-      - terraform plan -out vpc.plan
+      - terraform plan -module=module.vpc -module=module.subnet_public -out vpc.plan
       - terraform apply  vpc.plan
   post_build:
     commands:
