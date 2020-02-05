@@ -1,9 +1,5 @@
 #Create  Subnet
 
-locals {
-subnettag = ${var.subnetname}_${var.subnettype}
-
-}
 
 resource "aws_subnet" "awssubnet" {
   vpc_id = var.vpc_id
@@ -12,7 +8,7 @@ resource "aws_subnet" "awssubnet" {
   map_public_ip_on_launch = var.mapPublicIP
   
 tags =  {
-  Name = ${local.subnettag}
+  Name = "${var.subnetname}_${var.subnettype}"
 
 }
 
