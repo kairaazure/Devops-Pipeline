@@ -1,9 +1,9 @@
 # Create Security Group
 
-resource "aws_security_group" "var.sg_name" {
+resource "aws_security_group" "awsSG" {
 
   vpc_id       = aws_vpc.terraform_vpc.id
-  name         = "Terraform VPC Security Group"
+  name         = var.sg_name
   description  = "Terraform VPC Security Group"
   
   ingress {
@@ -24,7 +24,7 @@ resource "aws_security_group" "var.sg_name" {
   
   }
 tags =  {
-  Name = "${var.sg_name}"
+  Name = var.sg_name
 
 }
 }
