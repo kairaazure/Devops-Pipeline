@@ -17,3 +17,7 @@ variable "subnet_id" {
    description = "Subnet ID of vpc"
    default     = null
 }
+
+variable "Nameec2" {
+
+}
