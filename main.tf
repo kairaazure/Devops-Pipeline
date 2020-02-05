@@ -38,7 +38,7 @@ module "ec2_private" {
 
 module "subnet_public" {
   source = "./modules/subnet"
-  vpc_id = ${module.vpc.vpc_id}
+  vpc_id = "${module.vpc.vpc_id}"
   SubnetCidrBlock = "192.168.2.0/24"
   availabilityZone = "us-east-1a"
   mapPublicIP = true
@@ -49,7 +49,7 @@ module "subnet_public" {
 
 module "subnet_private" {
   source = "./modules/subnet"
-  vpc_id = ${module.vpc.vpc_id}
+  vpc_id = "${module.vpc.vpc_id}"
   SubnetCidrBlock = "192.168.3.0/24"
   availabilityZone = "us-east-1b"
   mapPublicIP = false
@@ -60,14 +60,14 @@ module "subnet_private" {
 
 module "route_table_public" {
   source = "./modules/Route-Table"
-  vpc_id = ${module.vpc.vpc_id}
+  vpc_id = "${module.vpc.vpc_id}"
   RTname = "RT1"
   RTtype = "public"
 }
 
 module "route_table_private" {
   source = "./modules/Route-Table"
-  vpc_id = ${module.vpc.vpc_id}
+  vpc_id = "${module.vpc.vpc_id}"
   RTname = "RT2"
   RTtype = "private"
 }
@@ -101,7 +101,7 @@ module "nacl" {
   source = "./modules/Nacl"
   destinationCIDRblock = ""
   vpc_id = "${module.vpc.vpc_id}"
-  subnet_id = ""${module.subnet_public.subnet_id}
+  subnet_id = "${module.subnet_public.subnet_id}"
   
 }
 } 
