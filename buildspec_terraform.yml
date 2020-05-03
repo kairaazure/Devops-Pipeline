@@ -24,10 +24,9 @@ phases:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
       - terraform init
-      - terraform plan -target=module.subnet_public -out subnet.plan
-      - terraform plan -target=module.securitygroup -out securitygroup.plan
-      - terraform plan -target=module.ec2_public -out ec2.plan
-      - terraform apply subnet.plan securitygroup.plan ec2.plan
+      - terraform apply -target=module.subnet_public
+      - terraform apply -target=module.securitygroup
+      - terraform apply -target=module.ec2_public
   post_build:
     commands:
       - echo "Nothing to do in the post_build for now"
