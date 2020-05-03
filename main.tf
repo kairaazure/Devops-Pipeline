@@ -15,7 +15,7 @@ module "vpc" {
 
 module "SecurityGroup" {
   source = "./modules/SecurityGroup"
-  SG_CIDRblock = "122.162.206.189/32"
+  SG_CIDRblock = "171.61.166.24/32"
   sg_name = "SG1"
 }
 
