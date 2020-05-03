@@ -25,6 +25,8 @@ phases:
       - cd "$CODEBUILD_SRC_DIR"
       - terraform init
       - terraform plan -target=module.ec2_public -out ec2.plan
+      - terraform plan -target=module.ec2_public -out ec2.plan
+      - terraform plan -target=module.ec2_public -out ec2.plan
       - terraform apply ec2.plan
   post_build:
     commands:
