@@ -1,5 +1,5 @@
 variable "SG_CIDRblock" {
-   default = [ null ]
+   default = null
 }
 
 variable "sg_name" {
