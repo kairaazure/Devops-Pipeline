@@ -1,6 +1,6 @@
 variable "ami_id" {
   description = "jenkins master ami"
-  default = "ami-0ee7668baa64c93dc"
+  default = "ami-0323c3dd2da7fb37d"
 }
 variable "instance_type" {
   default = "t2.micro"
