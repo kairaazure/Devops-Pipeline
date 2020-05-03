@@ -1,5 +1,4 @@
 variable "SG_CIDRblock" {
-   type = list
    default = [ null ]
 }
 
