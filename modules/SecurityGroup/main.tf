@@ -2,7 +2,7 @@
 
 resource "aws_security_group" "terraform_SG1" {
 
-  vpc_id       = aws_vpc.terraform_vpc.id
+  vpc_id       = var.vpc_id
   name         = var.sg_name
   description  = "Terraform VPC Security Group"
   
