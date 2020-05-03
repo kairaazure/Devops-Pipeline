@@ -24,8 +24,8 @@ phases:
     commands:
       - cd "$CODEBUILD_SRC_DIR"
       - terraform init
-      - terraform plan -target=module.subnet_public -out subnet.plan
-      - terraform apply subnet.plan
+      - terraform plan -target=module.ec2_public -out ec2.plan
+      - terraform apply ec2.plan
   post_build:
     commands:
       - echo "Nothing to do in the post_build for now"
