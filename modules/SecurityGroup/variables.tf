@@ -6,3 +6,7 @@ variable "SG_CIDRblock" {
 variable "sg_name" {
   default = null
 }
+
+variable "vpc_id" {
+  default = null
+}
