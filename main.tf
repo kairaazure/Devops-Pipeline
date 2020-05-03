@@ -17,6 +17,7 @@ module "SecurityGroup" {
   source = "./modules/SecurityGroup"
   SG_CIDRblock = "171.61.166.24/32"
   sg_name = "SG1"
+  vpc_id = "${module.vpc.vpc_id}"
 }
 
 module "ec2_public" {
