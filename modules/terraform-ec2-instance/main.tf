@@ -11,8 +11,8 @@ resource "aws_instance" "jenkins_master" {
     delete_on_termination = false
   }
   tags =  {
-    Name   = "var.Nameec2"
-    Author = "Nikhil Gupta"
+    Name   = "var.Name"
+    Author = "Kapil Bansal"
     Tool   = "Terraform"
   }
 }
