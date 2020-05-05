@@ -24,7 +24,7 @@ module "ec2_public" {
   source = "./modules/terraform-ec2-instance"
   vpc_SG = ["${module.SecurityGroup.vpc_SG1}"]
   subnet_id = "${module.subnet_public.subnet_id}"
-  Nameec2 = "ec2_Public"
+  Name = "ec2_Public"
 
 }
 
@@ -32,7 +32,7 @@ module "ec2_private" {
   source = "./modules/terraform-ec2-instance"
   vpc_SG = ["${module.vpc.vpc_SG1}"]
   subnet_id = "${module.subnet_private.subnet_id}"
-  Nameec2 = "ec2_Private"
+  Name = "ec2_Private"
 
 }
 
