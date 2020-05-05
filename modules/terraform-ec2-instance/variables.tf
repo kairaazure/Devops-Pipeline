@@ -18,6 +18,6 @@ variable "subnet_id" {
    default     = null
 }
 
-variable "Nameec2" {
+variable "Name" {
 
 }
