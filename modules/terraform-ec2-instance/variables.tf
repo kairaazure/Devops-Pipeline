@@ -19,5 +19,5 @@ variable "subnet_id" {
 }
 
 variable "Name" {
-
+  default = "ec2_terraform"
 }
