@@ -25,7 +25,7 @@ phases:
       - cd "$CODEBUILD_SRC_DIR"
       - terraform init
       #- terraform refresh
-      - terraform plan      
+      - terraform plan -out=tfplan   
       - terraform apply -target=module.vpc -auto-approve
       - terraform apply -target=module.securitygroup -auto-approve
       - terraform apply -target=module.subnet_public -auto-approve
