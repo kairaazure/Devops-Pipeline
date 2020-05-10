@@ -29,7 +29,7 @@ phases:
       - terraform apply -target=module.subnet_public -auto-approve
       - terraform apply -target=module.ec2_public    -auto-approve
      
-      #- terraform destroy
+      - terraform destroy -auto-approve
       
   post_build:
     commands:
