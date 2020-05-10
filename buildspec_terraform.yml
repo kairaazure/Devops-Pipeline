@@ -27,7 +27,6 @@ phases:
       - terraform apply -target=module.vpc -auto-approve
       - terraform apply -target=module.securitygroup -auto-approve
       - terraform apply -target=module.subnet_public -auto-approve
-      - terraform apply -target=module.route_table_public -auto-approve
       - terraform apply -target=module.ec2_public    -auto-approve
       
   post_build:
