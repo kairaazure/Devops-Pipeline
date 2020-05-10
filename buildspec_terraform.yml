@@ -27,7 +27,13 @@ phases:
       - terraform apply -target=module.vpc -auto-approve
       - terraform apply -target=module.securitygroup -auto-approve
       - terraform apply -target=module.subnet_public -auto-approve
+      - terraform apply -target=module.route_table_public -auto-approve
+      - terraform apply -target=module.ig -auto-approve
+      - terraform apply -target=module.associate_ig_rt -auto-approve
+      - terraform apply -target=module.associate_subnet_rt_public -auto-approve
+      - terraform apply -target=module.nacl -auto-approve
       - terraform apply -target=module.ec2_public    -auto-approve
+      
   post_build:
     commands:
       - echo "Nothing to do in the post_build for now"
