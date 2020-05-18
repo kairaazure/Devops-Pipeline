@@ -6,7 +6,7 @@ env:
 phases:
   install:
     commands:
-      ## install required binary
+      ### install required binary
       - "curl -s -qL -o /usr/bin/jq https://stedolan.github.io/jq/download/linux64/jq"
       - "chmod +x /usr/bin/jq"
       - "cd /usr/bin"
